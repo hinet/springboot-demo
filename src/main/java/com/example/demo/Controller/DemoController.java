@@ -14,9 +14,9 @@ import java.util.Map;
 public class DemoController {
     @Autowired
     private NewsRepository news;
+    
     @RequestMapping("/")
     private String index(Map<String,Object> map){
-        System.out.print(news.findAll());
         map.put("list", news.findAll());
         map.put("title", "demo");
         return "/index";
