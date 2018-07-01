@@ -1,5 +1,27 @@
 # springboot-demo
 
+# 配置阿里镜像
+
+国内可以配置阿里镜像，加速maven构建
+
+在pom.xml中写入：
+```text
+<repositories>
+    <repository>
+        <id>maven-ali</id>
+        <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+        <releases>
+            <enabled>true</enabled>
+        </releases>
+        <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+            <checksumPolicy>fail</checksumPolicy>
+        </snapshots>
+    </repository>
+</repositories>
+```
+
 # 常用注解
 
 * @SpringBootApplication
